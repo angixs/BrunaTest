@@ -1,0 +1,81 @@
+
+#hero {
+  min-height: 100vh;
+  background: url('../assets/image/portfolio/aprile_pubblicità-20.jpg') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 80px 15px 40px;
+  position: relative; /* necessario per l'overlay */
+  z-index: 1;
+    min-height: 100vh; /* default per desktop */
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+ inset:0;
+  background: rgba(50, 50, 50, 0.5); /* grigio semitrasparente */
+  z-index: -1; /* manda l’overlay dietro al contenuto */
+}
+
+
+#hero h1 {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  font-weight: bold;
+}
+
+#hero p {
+  font-size: clamp(1rem, 3vw, 1.3rem);
+
+}
+/* ===== NAVBAR ===== */
+ .navbar {
+      background-color: rgba(12, 3, 3, 0.325);
+    }
+.navbar a {
+  color: white !important;
+  font-weight: 500;
+}
+.navbar-brand {
+  font-weight: bold;
+}
+
+/* ===== SEZIONI ===== */
+.section-title {
+  text-align: center;
+  margin: 3rem 0 1rem;
+}
+.section-subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+/* ===== CARD PRODOTTI ===== */
+.card {
+  border: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card img {
+  height: 220px;
+  object-fit: cover; /* ritaglia bene l'immagine */
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #222;
+  color: #ccc;
+  padding: 2rem 0;
+  text-align: center;
+  margin-top: 3rem;
+}
